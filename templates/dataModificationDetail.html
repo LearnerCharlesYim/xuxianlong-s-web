@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block title %}
+数据管理
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+{% endblock %}
+{% block body %}
+    <h3 class="page-title">{{ person_model.index.schoolName }}</h3>
+    <div class="question-info">
+        <span class="question-author">{{ person_model.author.username }}</span>
+        <span class="question-time">时间:{{ person_model.create_time }}</span>
+    </p>
+    </div>
+    <hr>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td>学校名称</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolName }}" name="schoolName">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>年份</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.year }}" name="year">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校地区</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolProvince }}" name="province">
+                    </div>
+                </td>
+                <td>省</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolCity }}" name="city">
+                    </div>
+                </td>
+                <td>市</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolCounty }}" name="county">
+                    </div>
+                </td>
+                <td><h6>区县</h6></td>
+            </tr>
+            <tr>
+                <td>在校学生总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolStu }}" name="sumStu">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校年度信息化投入(万元)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.schoolPut }}" name="schoolPut">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校所在区县年度生均经费(万元)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.studentAvg }}" name="studentAvg">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>计算机配置总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.computerSum }}" name="computerSum">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>多媒体教室总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.multiClass }}" name="multiClass">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>通用教室与专用教室总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.classSum }}" name="classSum">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校网络出口总宽带速度(M)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.broadband }}" name="broadband">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>区县分配到学校的宽带速度平均值(M)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.broadbandAvg }}" name="broadbandAvg">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师备课教学效果指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.effectPrepare }}" name="effectPrepare">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师备课教学针对性指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.pertinencePrepare }}" name="pertinencePrepare">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>教师教学优化课堂指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.optimizeTeach }}" name="optimizeTeach">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师教学转变学习方式指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.turnoverTeach }}" name="turnoverTeach">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>课程管理指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.manageCourse }}" name="manageCourse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>课程交流指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{ person_model.index.communicateCourse }}" name="communicateCourse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button class="btn btn-primary btn-block form-container">保存修改</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+学校检索
+{% endblock %}
+
+{% block body %}
+    <h3>&nbsp;&nbsp;学校检索</h3>
+    <form class="form-inline" method="post">
+        <div class="form-group">
+
+            <input type="text" class="form-control" name="province" placeholder="如湖北">
+            <label for="exampleInputName2">省</label>
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" name="city" placeholder="如武汉">
+            <label for="exampleInputEmail2">市</label>
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" name="county" placeholder="如武昌">
+            <label for="exampleInputName2">区（县）</label>
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" name="school" placeholder="输入学校">
+        </div>
+        <div style="float:right;margin-top: 10px">
+        <button type="submit" class="btn btn-default">检索</button>
+        </div>
+</form>
+{% endblock %}

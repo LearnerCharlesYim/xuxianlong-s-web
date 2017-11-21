@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+学校详情
+{% endblock %}
+
+{% block body %}
+
+
+
+        <table class="table">
+            <tr>
+                <th>学校</th>
+
+                <th>投入指数</th>
+                <th>配置指数</th>
+                <th>效果指数</th>
+                 <th>总指数</th>
+            </tr>
+            <tr>
+                <td>{{ school_info.schoolName }}</td>
+
+                <td>{{ school_info.I }}</td>
+                <td>{{ school_info.C }}</td>
+                <td>{{ school_info.E }}</td>
+                <td>{{ school_info.final_index }}</td>
+            </tr>
+        </table>
+
+{% endblock %}

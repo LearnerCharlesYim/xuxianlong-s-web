@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+搜索详情
+{% endblock %}
+
+
+{% block body %}
+
+
+            <table class="table">
+            <tr>
+                <th>学校</th>
+
+                <th>投入指数</th>
+                <th>配置指数</th>
+                <th>效果指数</th>
+                <th>总指数</th>
+            </tr>
+            {% for index in indexes %}
+            <tr>
+                <td>{{ index.schoolName }}</td>
+
+                <td>{{ index.I }}</td>
+                <td>{{ index.C }}</td>
+                <td>{{ index.E }}</td>
+                <td>{{ index.final_index }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}
+

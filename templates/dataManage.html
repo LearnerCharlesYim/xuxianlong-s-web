@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block title %}
+数据管理
+{% endblock %}
+
+{% block body %}
+        <form action="" method="POST">
+        <table>
+
+            <tr>
+                <th colspan="2"><h4 class="page-title">创建新学校教育信息化就绪指数</h4></th>
+            </tr>
+
+
+            <tr>
+                <td>学校名称</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入学校" name="schoolName">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>年份</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入年份" name="year">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校地区</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入省份" name="province">
+                    </div>
+                </td>
+                <td>省</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入城市" name="city">
+                    </div>
+                </td>
+                <td>市</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入城市" name="county">
+                    </div>
+                </td>
+                <td><h6>区县</h6></td>
+            </tr>
+            <tr>
+                <td>在校学生总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入学生总数" name="sumStu">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校年度信息化投入(万元)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="万元" name="schoolPut">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校所在区县年度生均经费(万元)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="万元" name="studentAvg">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>计算机配置总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="computerSum">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>多媒体教室总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="multiClass">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>通用教室与专用教室总数</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="classSum">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>学校网络出口总宽带速度(M)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="broadband">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>区县分配到学校的宽带速度平均值(M)</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="broadbandAvg">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师备课教学效果指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="effectPrepare">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师备课教学针对性指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="pertinencePrepare">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>教师教学优化课堂指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="optimizeTeach">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>教师教学转变学习方式指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="turnoverTeach">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>课程管理指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="manageCourse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>课程交流指数值</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入" name="communicateCourse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button class="btn btn-primary btn-block form-container">确定</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+
+{% endblock %}

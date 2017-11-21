@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+学校排名
+{% endblock %}
+
+{% block body %}
+{#        {% for index in indexes %}#}
+{#           <ul class="list-group">#}
+{#  <li class="list-group-item">#}
+{#      <h5><a href="{{ url_for('dataModificationDetail',id=index.id) }}" style="color: dodgerblue;text-decoration: none">{{ index.schoolName}}</a></h5>#}
+{#      {{ index.final_index }}#}
+{#  </li>#}
+{#</ul>#}
+{#        {% endfor %}#}
+
+    <table class="table table-striped">
+        <tr>
+            <th>排名</th>
+            <th>学校名称</th>
+            <th>总指数</th>
+        </tr>
+        {% for index in indexes %}
+            <tr>
+            <td>{{ loop.index }}</td>
+            <td>
+                <a href="{{ url_for('rankDetail',id=index.id) }}" style="text-decoration: none" > {{ index.schoolName}} </a>
+            </td>
+            <td>
+            {{ index.final_index }}
+            </td>
+        {% endfor %}
+    </tr>
+
+    </table>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+数据管理
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+{#    <script>#}
+{#        $(function () {#}
+{#            $("#delete-btn").click(function () {#}
+{#                var schoolInput = $('input[name="username"]');#}
+{#                $.post({#}
+{#                    'url':'/alterData/',#}
+{#                    'data':{{ person_add.index.schoolName}},#}
+{#                    'success':function (data) {#}
+{#                        if(data['code'] == 200){#}
+{#                            alert(data['message']);#}
+{#                            $("#{{ loop.index }}").remove();#}
+{#                    }#}
+{#                }#}
+{#            });#}
+{#            });#}
+{##}
+{#        })#}
+{#    </script>#}
+{% endblock %}
+
+{% block body %}
+        {% for person_add in person_adds %}
+           <ul class="list-group">
+  <li class="list-group-item" id="{{ loop.index }}">
+      <h5><a href="{{ url_for('dataModificationDetail',id=person_add.index_id) }}" style="color: dodgerblue;text-decoration: none">{{ person_add.index.schoolName}}</a></h5>
+      <div class="question-info">
+          <span class="question-author">{{ person_add.author.username }}
+          </span>
+          <span class="question-time">{{ person_add.create_time }}
+          </span>
+          <button id="delete-btn">删除</button>
+      </div>
+  </li>
+</ul>
+        {% endfor %}
+{% endblock %}
+
